@@ -1,6 +1,6 @@
 {
-  "name": "reacttemplate",
-  "version": "1.0.2",
+  "name": "reactui",
+  "version": "1.0.0",
   "description": "A web development template",
   "private": true,
   "dependencies": {
