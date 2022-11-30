@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "commit": "cz",
+    "dev": "docker-compose -f docker-compose.dev.yml up",
     "release": "standard-version"
   },
   "dependencies": {

@@ -1,4 +1,6 @@
+import { useState, useEffect } from "react";
 import styled from "./App.module.scss";
+import axios from "axios";
 
 /**
  * @summary App component
@@ -6,11 +8,25 @@ import styled from "./App.module.scss";
  * @returns JSX.Element
  */
 
+
+
 const App = () => {
+  const [data, setData] = useState<string>('');
+
+  useEffect(() => {
+    axios.get('http://localhost:8080/cats').then(
+      (response) => {
+        setData(response.data);
+      }).catch((error) => {
+        console.log(error);
+      }
+    )
+  }, []);
+
   return (
     <div className={styled.App}>
       <h1>React Template</h1>
-      <h2>Other Title</h2>
+      <h2>{data}</h2>
     </div>
   );
 };
