@@ -7,5 +7,12 @@ yarn lint
 
 cd ..
 
+cd ./server
+
+yarn format
+yarn lint
+
+cd ..
+
 git add .
 
